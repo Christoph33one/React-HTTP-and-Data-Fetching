@@ -14,6 +14,7 @@ export class HTTPRequests extends Component {
         axios.get('https://jsonplaceholder.typicode.com/posts')
         .then(response => {
             console.log(response)
+            // call setState to update the componet in the state
             this.setState({
                 posts: response.data
             })
@@ -21,6 +22,7 @@ export class HTTPRequests extends Component {
     }
   render() {
     return (
+        // render the data (JSON)
       <div>
         <h2>Posts:</h2>
         {JSON.stringify(this.state.posts)}
